@@ -20,17 +20,17 @@ const RestaurantsList = props =>{
     
   };
   
-  const  onChangeSearchName = e =>{
+  const  onChangeSearchName = e => {
     const searchName = e.target.value;
     setSearchName(searchName);
   };
   
-  const onChangeSearchCuisine = e =>{
+  const onChangeSearchCuisine = e => {
     const searchCuisine = e.target.value;
     setSearchCuisine(searchCuisine);
   };
   
-  const retrieveRestaurants = () =>{
+  const retrieveRestaurants = () => {
     RestaurantDataService.getAll()
       .then(response => {
         console.log(response.data);
